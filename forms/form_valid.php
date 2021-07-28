@@ -134,23 +134,23 @@
         <table>
             <tr>
                 <td>Name</td>
-                <td><?php echo $_POST["name"] ?></td>
+                <td><?php echo $_POST["name"]; ?></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><?php echo $_POST["email"] ?></td>
+                <td><?php echo $_POST["email"]; ?></td>
             </tr>
             <tr>
                 <td>Gender</td>
-                <td><?php echo $_POST["gender"] ?></td>
+                <td><?php echo $_POST["gender"]; ?></td>
             </tr>
             <tr>
                 <td>Website</td>
-                <td><?php echo $_POST["website"] ?></td>
+                <td><?php echo $_POST["website"]; ?></td>
             </tr>
             <tr>
                 <td>Comment</td>
-                <td><?php echo $_POST["comment"] ?></td>
+                <td><?php echo $_POST["comment"]; ?></td>
             </tr>
         </table>
     </div>
@@ -159,7 +159,7 @@
 Name	anubhab
 Email	a@test.in
 Gender	male
-Website	sample website
+Website	sample@website.com
 Comment	very nice very nice very nice very nice -->
     
 </body>
