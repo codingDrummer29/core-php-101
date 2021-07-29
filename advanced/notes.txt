@@ -1,0 +1,10 @@
+The _FILES array contains following properties −
+
+$_FILES['file']['name'] - The original name of the file to be uploaded.
+$_FILES['file']['type'] - The mime type of the file.
+$_FILES['file']['size'] - The size, in bytes, of the uploaded file.
+$_FILES['file']['tmp_name'] - The temporary filename of the file in which the uploaded file 
+                              was stored on the server.
+$_FILES['file']['error'] - The error code associated with this file upload.
+
+predefined functions on files: SOURCE: https://www.w3schools.com/php/php_ref_filesystem.asp
