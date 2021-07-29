@@ -8,3 +8,68 @@ $_FILES['file']['tmp_name'] - The temporary filename of the file in which the up
 $_FILES['file']['error'] - The error code associated with this file upload.
 
 predefined functions on files: SOURCE: https://www.w3schools.com/php/php_ref_filesystem.asp
+
+
+PHP Create/Retrieve a Cookie
+
+    The example creates a cookie named "user" with the value "John Doe". The cookie will expire after 30 days 
+    (86400 * 30). The "/" means that the cookie is available in entire website (otherwise, select the directory 
+    you prefer).
+
+    We then retrieve the value of the cookie "user" (using the global variable $_COOKIE). We also use the isset() 
+    function to find out if the cookie is set
+
+
+Modify a Cookie Value
+
+    To modify a cookie, just set (again) the cookie using the setcookie() function
+
+
+Delete a Cookie
+
+    To delete a cookie, use the setcookie() function with an expiration date in the past
+
+Check if Cookies are Enabled
+
+    The following example creates a small script that checks whether cookies are enabled. First, try to create 
+    a test cookie with the setcookie() function, then count the $_COOKIE array variable
+
+Cookie SOURCE: https://www.w3schools.com/php/php_ref_network.asp
+
+
+
+PHP Session SOURCE: https://www.w3schools.com/php/php_sessions.asp 
+NOTE: The session_start() function must be the very first thing in your document. Before any HTML tags.
+start session:
+    A session is started with the session_start() function.
+    Session variables are set with the PHP global variable: $_SESSION.
+    
+    create a new page called "demo_session1.php". In this page, we start a new PHP session and set some session 
+    variables
+
+get session values:
+    Next, we create another page called "demo_session2.php". From this page, we will access the session 
+    information we set on the first page ("demo_session1.php").
+
+    Notice that session variables are not passed individually to each new page, instead they are retrieved from 
+    the session we open at the beginning of each page (session_start()).
+
+    all session variable values are stored in the global $_SESSION variable
+
+modify: overwrite
+
+Destroy a PHP Session:
+    To remove all global session variables and destroy the session 
+    use session_unset() and session_destroy()
+
+    creating another file destro.php
+
+
+PHP Filters
+filter_var()
+
+avoid o error with condition 
+if (filter_var($int, FILTER_VALIDATE_INT) === 0 || !filter_var($int, FILTER_VALIDATE_INT) === false) {}
+
+
+Exception SOURCE: https://www.w3schools.com/php/php_exceptions.asp
