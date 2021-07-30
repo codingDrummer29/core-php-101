@@ -1,0 +1,30 @@
+<?php
+
+    // the abstract method has an argument, and the child class has two optional arguments 
+    // that are not defined in the parent's abstract method
+
+    abstract class ParentClass {
+        // Abstract method with an argument
+        abstract protected function prefixName($name);
+    }
+
+    class ChildClass extends ParentClass {
+        public function prefixName($name, $separator = ".", $greet = "Dear") {
+            if ($name == "John Doe") {
+                $prefix = "Mr.";
+            } elseif ($name == "Jane Doe") {
+                $prefix = "Mrs.";
+            } else {
+                $prefix = "";
+            }
+            
+            return "{$greet} {$prefix}{$separator} {$name}";
+        }
+    }
+
+    $class = new ChildClass;
+    echo $class->prefixName("John Doe");
+    echo "<br>";
+    echo $class->prefixName("Jane Doe");
+
+?>
